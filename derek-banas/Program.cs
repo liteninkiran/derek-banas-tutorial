@@ -34,25 +34,19 @@ namespace derek_banas
 
         private static void dataTypes()
         {
-            decimal decPi  = 3.1415926535897932384626433832M;
-            decimal decNum = 0.0000000000000000000000000018M;
+            bool boolFromString = bool.Parse("true");
+            int intFromString = int.Parse("100");
 
-            double dblPi  = 3.141592653589793;
-            double dblNum = 0.0000000000000004;
+            DateTime myDate = new DateTime(2005, 9, 17);
 
-            Console.WriteLine("Smallest Long: {0}", long.MinValue);
-            Console.WriteLine("Biggest Long: {0}", long.MaxValue);
-            Console.WriteLine("");
+            Console.WriteLine("Day of week: {0}", myDate.DayOfWeek);
 
-            Console.WriteLine("DECIMAL Pi + Num: {0}", decPi + decNum);
-            Console.WriteLine("Smallest Decimal: {0}", decimal.MinValue);
-            Console.WriteLine("Biggest Decimal: {0}", decimal.MaxValue);
-            Console.WriteLine("");
+            Console.WriteLine("Six months laster: {0}", myDate.AddMonths(6));
 
-            Console.WriteLine("DOUBLE Pi + Num: {0}", dblPi + dblNum);
-            Console.WriteLine("Smallest Double: {0}", double.MinValue);
-            Console.WriteLine("Biggest Double: {0}", double.MaxValue);
-            Console.WriteLine("");
+            TimeSpan lunchTime = new TimeSpan(1, 0, 0);
+            lunchTime = lunchTime.Add(new TimeSpan(0, 30, 0));
+
+            Console.WriteLine("Lunch Time: {0}", lunchTime);
 
         }
     }
